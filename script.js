@@ -213,7 +213,7 @@
 //movies = [["Movie 1", 1], ["Movie 2", 2], ["Movie 3", 3], ["Movie 4", 4], ["Movie 5", 5]];
 //Now, loop through the array and filter out and display only the movie names. You must use the filter() method and you’ll need to filter out the names by their primitive data type. 
 
-//var movies = ["Wings of Desire", 1, "A Hard Days Night", 2, "The Fifth Element", 3, "Pinocchio", 4, "Spirited Away", 5];
+//var movies = [["Wings of Desire", 1], ["A Hard Days Night", 2], ["The Fifth Element", 3], ["Pinocchio", 4], ["Spirited Away", 5]];
 //var merged = [].concat.apply([], movies);
 //var titles = merged.filter(function (item) {
 //    "use strict";
