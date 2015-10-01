@@ -42,21 +42,6 @@
 //movies[4] = "Kikis Delivery Service";
 //movies[5] = "Performance";
 //movies[6] = "A Clockwork Orange";
-//
-//movies.forEach(function (movies) {
-//    "use strict";
-//    window.console.log(movies);
-//});
-
-//var movies = [];
-//movies[0] = "Wings of Desire";
-//movies[1] = "A Hard Days Night";
-//movies[2] = "The Fifth Element";
-//movies[3] = "Pinocchio";
-//movies[4] = "Kikis Delivery Service";
-//movies[5] = "Performance";
-//movies[6] = "A Clockwork Orange";
-//
 //for (var i = 0; i < movies.length; i++) {
 //    window.console.log(movies[i]);
 //}
@@ -136,30 +121,18 @@
 //window.console.log(movies.shift());
 
 
-
-
-// ???????????????????????????????????
 //Part 12. Programmatically retrieve the movies in your array that you do not like and return their indices. Then, using those indices, programmatically add movies that you do like. 
 
-var favMovies = ["Wings of Desire", "A Hard Days Night", "The Fifth Element", "Pinocchio", "Kikis Delivery Service", "Performance", "A Clockwork Orange"];
-var leastFavMovies = ["Sucker Punch", "Bloodrayne", "Barbwire"];
-var leastFavIndices = leastFavMovies.indexOf(leastFavMovies);
-
-window.console.log(leastFavIndices);
-
-
-
-
-//var names = new Array("Zak", "Fred", "Sally", "Jessica", "John", "Mike");
-//console.log(names.indexOf("Sally")); 
-//
-//var names = new Array("Zak", "Fred", "Sally");
-//names.splice(1, 2, "Jessica", "John", "Mike");
-//console.log(names); 
-
-
-
-
+//var movies;
+//var favMovies = ["Wings of Desire", "A Hard Days Night", "The Fifth Element", "Pinocchio", "Kikis Delivery Service", "Performance", "A Clockwork Orange"];
+//var leastFavMovies = ["Sucker Punch", "Bloodrayne", "Barbwire"];
+//var leastFavLength = leastFavMovies.length;
+//leastFavMovies.splice(0, leastFavLength, "The Eternal Sunshine of the Spotless Mind", "The Science of Sleep", "The Wizard of Oz");
+//movies = favMovies.concat(leastFavMovies);
+//for (var i = 0; i < movies.length; i++) 
+//{
+//    window.console.log(movies[i]);
+//}
 
 //Part 13. Create two associative arrays called employee1 and employee2 respectively. Each array should have an employeeid, name, title, department, and whether or not the employee is a current employee of the company. Now, add both of those associative arrays to a new array called employees. Then, programmatically display the name of the second employee within a console window. 
 
@@ -235,33 +208,18 @@ window.console.log(leastFavIndices);
 //     }
 //    }
 
-//for (var i = 0; i < employees.length; i++) {
-//    if (employees[i]["isCurrent"] === false) {
-//    window.console.log("");
-//    }
-//     else {
-//    window.console.log(employees[i]["name"]);
-//     }
-//    }
-
-
-
-
 
 //Part 16. Create a multi-dimensional array that contains your 5 favorite movies and their ranking from 1-5. The array should look something like this: 
 //movies = [["Movie 1", 1], ["Movie 2", 2], ["Movie 3", 3], ["Movie 4", 4], ["Movie 5", 5]];
 //Now, loop through the array and filter out and display only the movie names. You must use the filter() method and you’ll need to filter out the names by their primitive data type. 
 
-// ????????????????????  NEEDS TO BE A MULTI-DIMENSIONAL ARRAY
-
 //var movies = ["Wings of Desire", 1, "A Hard Days Night", 2, "The Fifth Element", 3, "Pinocchio", 4, "Spirited Away", 5];
-//var titles = movies.filter(function (item) {
+//var merged = [].concat.apply([], movies);
+//var titles = merged.filter(function (item) {
 //    "use strict";
 //    return typeof item === "string";
 //});
 //window.console.log(titles);
-
-
 
 
 //Practice with Functions (5 points)
@@ -293,7 +251,6 @@ window.console.log(leastFavIndices);
 //MARK 
 //FRED 
 //SALLY 
-
 
 //var employees = ["Michael", "Sue", "Robert", "Leslie", "George"];
 //var showEmployee = function (names) {
@@ -372,7 +329,7 @@ window.console.log(leastFavIndices);
 //var firstNumber = parseInt(firstString, 10);
 //var secondNumber = parseInt(secondString, 10);
 //var operation = window.prompt("Enter an operation - add, subtract, multiply, or divide.");
-//function calculate(a, b, c) {
+//function calculate(firstnum, secondnum, operate) {
 //    "use strict";
 //    switch (operation) {
 //    case "add":
@@ -408,15 +365,15 @@ window.console.log(leastFavIndices);
 
 // Part 2. Write a JavaScript function that accepts a string as a parameter and when called, converts the first letter of each word of the string to upper case characters and return it.
                    
-//function capitalizeEachWord(str) {
+//function capitalizeEachWord(someWords) {
 //    "use strict";
-//    return str.replace(/\w\S*/g, function (txt) {
+//    return someWords.replace(/\w\S*/g, function (txt) {
 //        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
 //    });
 //}
-//var x = window.prompt("Enter a sentence using lowercase letters.");
-//var y = capitalizeEachWord(x);
-//window.alert(y);
+//var userInput = window.prompt("Enter a sentence using lowercase letters.");
+//var capitalize = capitalizeEachWord(userInput);
+//window.alert(capitalize);
 
 
 //Part 3. Write a JavaScript function that accepts a string as a parameter and when called, counts the number of vowels within the string and returns that number. 
@@ -435,25 +392,22 @@ window.console.log(leastFavIndices);
 
 // Part 4. Write a JavaScript function that when called, generates a string id (specified length) of 8 random characters and returns those characters as a string. This is a great application to learn for making password generator-type applications. 
 
-//function randomChars(len) {
-//    var chars = '';
-//
-//    while (chars.length < len) {
+//function randomChars(lengthOfString) {
+//    "use strict";
+//    var chars = "";
+//    while (chars.length < lengthOfString) {
 //        chars += Math.random().toString(36).substring(2);
 //    }
-//
-//    // Remove unnecessary additional characters.
-//    return chars.substring(0, len);
+//    return chars.substring(0, lengthOfString);
 //}
-//
 //window.console.log(randomChars(8));
 
 // Part 5. Write a JavaScript function that accepts a list of country names as input and when called, returns the longest country name as the output. 
 
 //function longestCountry() {
 //    "use strict";
-//    var countries = window.prompt("Enter your country names, seperated by commas.").split(","), lgth = 0, longest, i;
-//    for (var i=0; i < countries.length; i++){
+//    var countries = window.prompt("Enter your country names, seperated by commas.").split(","), lgth = 0, longest, i = 0;
+//    for (var i = 0; i < countries.length; i++){
 //    if(countries[i].length > lgth){
 //        var lgth = countries[i].length;
 //        longest = countries[i];
@@ -462,6 +416,3 @@ window.console.log(leastFavIndices);
 //return longest;
 //}
 //window.alert(longestCountry());
-
-
-//Germany, United States of America, Laos, Taiwan, France
