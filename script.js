@@ -141,11 +141,14 @@
 // ???????????????????????????????????
 //Part 12. Programmatically retrieve the movies in your array that you do not like and return their indices. Then, using those indices, programmatically add movies that you do like. 
 
-//var favMovies = ["Wings of Desire", "A Hard Days Night", "The Fifth Element", "Pinocchio", "Kikis Delivery Service", "Performance", "A Clockwork Orange"];
-//var leastFavMovies = ["Sucker Punch", "Bloodrayne", "Barbwire"];
-//var leastFavIndices = leastFavMovies.indexOf(leastFavMovies);
+var favMovies = ["Wings of Desire", "A Hard Days Night", "The Fifth Element", "Pinocchio", "Kikis Delivery Service", "Performance", "A Clockwork Orange"];
+var leastFavMovies = ["Sucker Punch", "Bloodrayne", "Barbwire"];
+var leastFavIndices = leastFavMovies.indexOf(leastFavMovies);
 
-//window.console.log(leastFavIndices);
+window.console.log(leastFavIndices);
+
+
+
 
 //var names = new Array("Zak", "Fred", "Sally", "Jessica", "John", "Mike");
 //console.log(names.indexOf("Sally")); 
@@ -280,8 +283,6 @@
 //window.console.log(result);
 
 
-
-
     
 //Part 3. Create a string array called employees and populate the array with several employee names. Then, create an anonymous function called showEmployee. The function should accept a parameter. Call this function, passing in the employees array into the function as a parameter. Make sure to display the result in the console window. Within the function, loop through the passed in array and display the result so that it looks exactly like this in the console window:
 //
@@ -293,29 +294,19 @@
 //FRED 
 //SALLY 
 
-// ?????????????????????
-//var employees = ["Michael Jones", "Sue Simmons", "Robert Matthews", "Leslie Collins", "George Teller"];
-//
-//var showEmployee(a) {
-//    window.console.log("My employees are ");
-//}
-////showEmployees(employees);
-//window.console.log(showEmployees(employees));
 
-
-
-//var showEmployee = function () {
-//    window.console.log(showEmployee(employees));
-//
-//};
-////showEmployee(employees);
+//var employees = ["Michael", "Sue", "Robert", "Leslie", "George"];
+//var showEmployee = function (names) {
+//        "use strict";
+//        window.console.log("\n" + "Employees:" + "\n" + "\n");
+//        var text = "";
+//        var i;
+//        for (i in names) {
+//            text += names[i] + "\n";
+//        }
+//        return (text.toUpperCase());
+//    };
 //window.console.log(showEmployee(employees));
-//var results = showEmployee(employees);
-//window.console.log(results);
-
-
-
-
 
 
 // Assignment 3, Part 2
